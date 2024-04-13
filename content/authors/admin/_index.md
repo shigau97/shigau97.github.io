@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 吳健雄
+title: Shivani Gautam
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Shiv-ani Gau-tam
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Shivani
+last_name: Gautam
 
 # Status emoji
 status:
@@ -17,15 +17,15 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Professor of Artificial Intelligence
+role: Software Engineer
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Stanford University
-    url: https://www.stanford.edu/
+  - name: PhD CS Student at North Dakota State University, Fargo
+    url: www.https://www.ndsu.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include machine learning architectures, image processing and explainable AI.
 
 # Interests to show in About widget
 interests:
@@ -36,15 +36,15 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
+    - course: PhD in Computer Science
+      institution: North Dakote State University
+      year: Current - 2025 May
+    - course: MS in Information Technology
+      institution: Minnesota State University, Mankato
+      year: 2021
+    - course: B.Tech in Information Technology
+      institution: Bhagwan Parshuram Institute Of Technology, GGSIPU, Delhi
+      year: 2019
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -120,5 +120,5 @@ social:
 highlight_name: true
 ---
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Shivani Gautam is a PhD student of Computer Science specializing in Machine Learning and Artificial Intelligence at North Dakota State University. Her research interest include image processing, black box model interpretability, explainable AI. She has previous works in cryptography and CNN architectures analysis.  
 {style="text-align: justify;"}
