@@ -62,27 +62,39 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
-          company_url: ''
+        - title: NDSU Information Technology Help Desk COnsultant - Tier 2
+          company: NDSU
+          company_url: 'https://www.ndsu.edu/it/'
           company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
+          location: Fargo, ND
+          date_start: '2022-01-01'
           date_end: ''
           description: |2-
               Responsibilities include:
 
-              * Analysing
-              * Modelling
-              * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
+              * Analysing, Escalating issues & Problem Solving
+              * Modelling, assisting and overseeing responsibilities
+              * Operating as first point of contact, collecting, dispensing information to ITS groups.
+        - title: Graduate Teaching Assistant 
+          company: NDSU
           company_url: ''
           company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+          location: Fargo, ND
+          date_start: '2021-09-01'
+          date_end: '2022-09-01'
+          description: Tutored and graded Visual C# subject.
+        - title: Graduate Research Assistant 
+          company: Center for Excellence in Teaching and Learning (CETL), MNSU, Mankato, USA
+          company_url: ''
+          company_logo: org-x
+          location: Fargo, ND
+          date_start: '2020-08-01'
+          date_end: '2021-05-01'
+          description: |2-
+                Responsibilities include:
+
+              * Analysing, Escalating issues & Problem Solving
+              * Modelling, assisting and overseeing responsibilities
     design:
       columns: '2'
   - block: accomplishments
@@ -116,15 +128,6 @@ sections:
           organization_url: https://www.edx.org
           title: Blockchain Fundamentals
           url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
-          url: ''
     design:
       columns: '2'
   - block: collection
