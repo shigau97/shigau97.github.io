@@ -30,7 +30,7 @@ bio: My research interests include machine learning architectures, image process
 # Interests to show in About widget
 interests:
   - Machine Learning Models
-  - Image Processing
+  - Image Processing 
   - Interpretable Machine Learning (XAI)
 
 # Education to show in About widget
