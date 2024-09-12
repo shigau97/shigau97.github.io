@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 | Wei Cao</title>
+    <link>https://weicao1990.github.io/publication_types/2/</link>
+      <atom:link href="https://weicao1990.github.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    <description>2</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://weicao1990.github.io/img/icon-192.png</url>
+      <title>2</title>
+      <link>https://weicao1990.github.io/publication_types/2/</link>
+    </image>
+    
+    <item>
+      <title>Doc2EDAG: An End-to-End Document-level Framework for Chinese Financial Event Extraction</title>
+      <link>https://weicao1990.github.io/publication/zheng-2019-doc-2-edag/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://weicao1990.github.io/publication/zheng-2019-doc-2-edag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self-paced Ensemble for Highly Imbalanced Massive Data Classification</title>
+      <link>https://weicao1990.github.io/publication/liu-2019-self/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://weicao1990.github.io/publication/liu-2019-self/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Balanced splitting on weighted intervals</title>
+      <link>https://weicao1990.github.io/publication/cao-2015-balanced/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://weicao1990.github.io/publication/cao-2015-balanced/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

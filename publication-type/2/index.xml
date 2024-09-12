@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 | Wei Cao</title>
+    <link>/publication-type/2/</link>
+      <atom:link href="/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <description>2</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>2</title>
+      <link>/publication-type/2/</link>
+    </image>
+    
+    <item>
+      <title>Evaluation of individual and ensemble probabilistic forecasts of COVID-19 mortality in the US</title>
+      <link>/publication/cramer-2021-evaluation/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/cramer-2021-evaluation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Impact of pandemic fatigue on the spread of COVID-19: a mathematical modelling study</title>
+      <link>/publication/tang-2021-impact/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/tang-2021-impact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards Inter-class and Intra-class Imbalance in Class-imbalanced Learning</title>
+      <link>/publication/liu-2021-towards/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/liu-2021-towards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MESA: Boost Ensemble Imbalanced Learning with MEta-SAmpler</title>
+      <link>/publication/liu-2020-mesa/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/liu-2020-mesa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Doc2EDAG: An End-to-End Document-level Framework for Chinese Financial Event Extraction</title>
+      <link>/publication/zheng-2019-doc-2-edag/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/zheng-2019-doc-2-edag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LMVP: Video Predictor with Leaked Motion Information</title>
+      <link>/publication/wang-2019-lmvp/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/wang-2019-lmvp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self-paced Ensemble for Highly Imbalanced Massive Data Classification</title>
+      <link>/publication/liu-2019-self/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/liu-2019-self/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Balanced splitting on weighted intervals</title>
+      <link>/publication/cao-2015-balanced/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/cao-2015-balanced/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

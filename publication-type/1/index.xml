@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 | Wei Cao</title>
+    <link>/publication-type/1/</link>
+      <atom:link href="/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>1</title>
+      <link>/publication-type/1/</link>
+    </image>
+    
+    <item>
+      <title>DEPTS: Deep Expansion Learning for Periodic Time Series Forecasting</title>
+      <link>/publication/fan-2021-depts/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/fan-2021-depts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HierST: A Unified Hierarchical Spatial-temporal Framework for COVID-19 Trend Forecasting</title>
+      <link>/publication/zheng-2021-hierst/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/zheng-2021-hierst/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Revisiting the evaluation of end-to-end event extraction</title>
+      <link>/publication/zheng-2021-revisiting/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/zheng-2021-revisiting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BRITS: bidirectional recurrent imputation for time series</title>
+      <link>/publication/cao-2018-brits/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/cao-2018-brits/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When will you arrive? estimating travel time based on deep neural networks</title>
+      <link>/publication/wang-2018-will/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/wang-2018-will/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DeepSD: supply-demand prediction for online car-hailing services using deep neural networks</title>
+      <link>/publication/wang-2017-deepsd/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/wang-2017-deepsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k-regret minimizing set: Efficient algorithms and hardness</title>
+      <link>/publication/cao-2017-k/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/cao-2017-k/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic user identification method across heterogeneous mobility data sources</title>
+      <link>/publication/cao-2016-automatic/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/publication/cao-2016-automatic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On top-k selection in multi-armed bandits and hidden bipartite graphs</title>
+      <link>/publication/cao-2015-top/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/cao-2015-top/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

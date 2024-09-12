@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 | Wei Cao</title>
+    <link>https://weicao1990.github.io/publication_types/1/</link>
+      <atom:link href="https://weicao1990.github.io/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://weicao1990.github.io/img/icon-192.png</url>
+      <title>1</title>
+      <link>https://weicao1990.github.io/publication_types/1/</link>
+    </image>
+    
+    <item>
+      <title>BRITS: bidirectional recurrent imputation for time series</title>
+      <link>https://weicao1990.github.io/publication/cao-2018-brits/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://weicao1990.github.io/publication/cao-2018-brits/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When will you arrive? estimating travel time based on deep neural networks</title>
+      <link>https://weicao1990.github.io/publication/wang-2018-will/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://weicao1990.github.io/publication/wang-2018-will/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DeepSD: supply-demand prediction for online car-hailing services using deep neural networks</title>
+      <link>https://weicao1990.github.io/publication/wang-2017-deepsd/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://weicao1990.github.io/publication/wang-2017-deepsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k-regret minimizing set: Efficient algorithms and hardness</title>
+      <link>https://weicao1990.github.io/publication/cao-2017-k/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://weicao1990.github.io/publication/cao-2017-k/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic user identification method across heterogeneous mobility data sources</title>
+      <link>https://weicao1990.github.io/publication/cao-2016-automatic/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://weicao1990.github.io/publication/cao-2016-automatic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On top-k selection in multi-armed bandits and hidden bipartite graphs</title>
+      <link>https://weicao1990.github.io/publication/cao-2015-top/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://weicao1990.github.io/publication/cao-2015-top/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
