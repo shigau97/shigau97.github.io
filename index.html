@@ -1039,30 +1039,6 @@
   <div class="media-body">
 
     <h3 class="article-title mb-0 mt-0" itemprop="name">
-      
-      <template id="publication-title-template">
-        {{#if publication}}
-          <a href="/publication/{{publication.id}}" itemprop="url">{{publication.title}}</a>
-        {{/if}}
-      </template>
-
-      <script>
-        const publicationTitleTemplate = document.getElementById('publication-title-template');
-        fetch('gs_data.json')
-          .then(response => response.json())
-          .then(data => {
-            // Assuming 'publications' holds an array of publications
-            const firstPublication = data.publications[0]; // Access the first publication
-            const publicationTitleHtml = Mustache.render(publicationTitleTemplate.innerHTML, { publication: firstPublication });
-            document.querySelector('.article-title').innerHTML = publicationTitleHtml;
-          })
-          .catch(error => {
-            console.error('Error fetching data:', error);
-          });
-      </script>
-      
-        
-
       <a href="/publication/icip-15/" itemprop="url">Object Segmentation with Deep Regression</a>
     </h3>
 
