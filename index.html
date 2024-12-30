@@ -1039,10 +1039,11 @@
 <div class="media stream-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="media-body">
 
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
+    <h3 class="article-title mb-0 mt-0 anew" itemprop="name">
       <a href="/publication/icip-15/" itemprop="url">Trusted and Secure Wireless Sensor Network using Cryptographic Algorithm and its comparative analysis</a>
-    
+      </h3>
 
+    <div id= "publications-placeholder"> </div>
     <script>
       fetch('gs_data.json')
         .then(response => response.json())
@@ -1058,6 +1059,7 @@
           //document.body.appendChild(affiliationElement);
   
           // Display Publications
+          const container = getElementById('publications-placeholder');
           const publicationsList = document.createElement('ul');
           for (const publicationId in data.publications) {
             const publication = data.publications[publicationId];
@@ -1065,7 +1067,7 @@
             listItem.textContent = `${publication.bib.title} (${publication.bib.pub_year}) - Citations: ${publication.num_citations}`;
             publicationsList.appendChild(listItem);
           }
-          document.body.appendChild(publicationsList); 
+          container.appendChild(publicationsList); 
   
           // Example using data from gs_data_shieldsio.json (assuming it has a 'badge_url' property)
           const shieldBadge = document.createElement('img');
@@ -1076,7 +1078,7 @@
           console.error('Error fetching data:', error);
         });
     </script>
-    </h3>
+    
     
 
     <div class="stream-meta article-metadata">
