@@ -1,0 +1,31 @@
+name: Update Data from Other Branch
+
+on:
+  # Trigger the workflow on pushes to the 'main' branch
+  push:
+    branches: [main]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+
+      - name: Checkout other branch
+        uses: actions/checkout@v2
+        with:
+          ref: 'google-scholar-stats' 
+
+      - name: Copy data files
+        run: |
+          cp -r ./gs_data.json ./  # Copy data.json to the main branch
+          cp -r ./gs_data_shieldsio.json ./
+
+      - name: Commit and Push
+        run: |
+          git config --local user.name 'GitHub Actions'
+          git config --local user.email 'actions@github.com'
+          git add .
+          git commit -m "Updated data files from other branch"
+          git push origin main
