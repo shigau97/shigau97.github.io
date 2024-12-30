@@ -939,39 +939,7 @@
 
   
 
-  <script>
-    fetch('gs_data.json')
-      .then(response => response.json())
-      .then(data => {
-        // Display Author Name
-        const nameElement = document.createElement('h2');
-        nameElement.textContent = data.name;
-        document.body.appendChild(nameElement);
 
-        // Display Affiliations
-        const affiliationElement = document.createElement('p');
-        affiliationElement.textContent = data.affiliation;
-        document.body.appendChild(affiliationElement);
-
-        // Display Publications
-        const publicationsList = document.createElement('ul');
-        for (const publicationId in data.publications) {
-          const publication = data.publications[publicationId];
-          const listItem = document.createElement('li');
-          listItem.textContent = `${publication.bib.title} (${publication.bib.pub_year}) - Citations: ${publication.num_citations}`;
-          publicationsList.appendChild(listItem);
-        }
-        document.body.appendChild(publicationsList); 
-
-        // Example using data from gs_data_shieldsio.json (assuming it has a 'badge_url' property)
-        const shieldBadge = document.createElement('img');
-        shieldBadge.src = data.badge_url; 
-        document.body.appendChild(shieldBadge); 
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  </script>
 
 
   
@@ -1075,6 +1043,39 @@
       <a href="/publication/icip-15/" itemprop="url">Trusted and Secure Wireless Sensor Network using Cryptographic Algorithm and its comparative analysis</a>
     </h3>
 
+    <script>
+      fetch('gs_data.json')
+        .then(response => response.json())
+        .then(data => {
+          // Display Author Name
+          //const nameElement = document.createElement('h2');
+          //nameElement.textContent = data.name;
+          //document.body.appendChild(nameElement);
+  
+          // Display Affiliations
+          //const affiliationElement = document.createElement('p');
+          //affiliationElement.textContent = data.affiliation;
+          //document.body.appendChild(affiliationElement);
+  
+          // Display Publications
+          const publicationsList = document.createElement('ul');
+          for (const publicationId in data.publications) {
+            const publication = data.publications[publicationId];
+            const listItem = document.createElement('li');
+            listItem.textContent = `${publication.bib.title} (${publication.bib.pub_year}) - Citations: ${publication.num_citations}`;
+            publicationsList.appendChild(listItem);
+          }
+          document.body.appendChild(publicationsList); 
+  
+          // Example using data from gs_data_shieldsio.json (assuming it has a 'badge_url' property)
+          const shieldBadge = document.createElement('img');
+          shieldBadge.src = data.badge_url; 
+          document.body.appendChild(shieldBadge); 
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    </script>
     
 
     <div class="stream-meta article-metadata">
