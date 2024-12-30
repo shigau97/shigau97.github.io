@@ -1043,7 +1043,11 @@
       <a href="/publication/icip-15/" itemprop="url">Trusted and Secure Wireless Sensor Network using Cryptographic Algorithm and its comparative analysis</a>
       </h3>
 
-    <div id= "publications-placeholder"> </div>
+    <div id= "publications-placeholder"> 
+      <ul>
+        <li>Sample Publication (2024) - Citations: 10</li>
+      </ul>
+    </div>
     <script>
       fetch('gs_data.json')
         .then(response => response.json())
@@ -1068,11 +1072,12 @@
             publicationsList.appendChild(listItem);
           }
           container.appendChild(publicationsList); 
+          console.log(container.innerHTML); 
   
           // Example using data from gs_data_shieldsio.json (assuming it has a 'badge_url' property)
           const shieldBadge = document.createElement('img');
           shieldBadge.src = data.badge_url; 
-          document.body.appendChild(shieldBadge); 
+          container.appendChild(shieldBadge); 
         })
         .catch(error => {
           console.error('Error fetching data:', error);
