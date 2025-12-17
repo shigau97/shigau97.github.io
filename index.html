@@ -574,6 +574,51 @@
 </div>
 <script>
   (async function() {
+    const container = document.getElementById('publications-placeholder');
+    if (!container) return;
+
+    try {
+      const res = await fetch('/results/gs_data.json', {cache: 'no-store'});
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+
+      // Display total citations badge-style
+      if (data.citedby) {
+        const badge = document.createElement('span');
+        badge.className = 'badge badge-secondary';
+        badge.textContent = `${data.citedby} citations`;
+        container.appendChild(badge);
+      }
+
+      // Display publications in clean format
+      const pubs = Object.values(data.publications || {})
+        .sort((a,b) => (b.num_citations || 0) - (a.num_citations || 0));
+
+      pubs.forEach(p => {
+        const pubDiv = document.createElement('div');
+        pubDiv.className = 'pub-list-item';
+        pubDiv.style.marginBottom = '1rem';
+        
+        const title = document.createElement('strong');
+        title.textContent = p.bib.title;
+        
+        const meta = document.createElement('div');
+        meta.className = 'text-muted small';
+        meta.innerHTML = `${p.bib.pub_year || ''} · Cited by ${p.num_citations || 0}`;
+        
+        pubDiv.appendChild(title);
+        pubDiv.appendChild(meta);
+        container.appendChild(pubDiv);
+      });
+
+    } catch (err) {
+      container.innerHTML = '<p class="text-muted">Publications loading...</p>';
+    }
+  })();
+</script>
+<!--
+<script>
+  (async function() {
     const placeholderId = 'publications-placeholder';
     const container = document.getElementById(placeholderId);
     if (!container) {
@@ -638,5 +683,6 @@
     }
   })();
 </script>
+-->
 </body>
 </html>
