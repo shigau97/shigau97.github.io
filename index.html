@@ -175,7 +175,7 @@
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
               <p class="course">B.Tech in Information Technology, 2019</p>
-              <p class="institution">Guru Gobind Singh Indraprastha University, BPTI, Delhi</p>
+              <p class="institution">Guru Gobind Singh Indraprastha University, BPIT, Delhi</p>
             </div>
           </li>
         </ul>
@@ -408,7 +408,7 @@
           //affiliationElement.textContent = data.affiliation;
           //document.body.appendChild(affiliationElement);
           // Display Publications
-          const container = getElementById('publications-placeholder');
+          const container = document.getElementById('publications-placeholder');
           const publicationsList = document.createElement('ul');
           for (const publicationId in data.publications) {
             const publication = data.publications[publicationId];
