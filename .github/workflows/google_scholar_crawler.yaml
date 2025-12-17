@@ -1,29 +1,62 @@
 name: Get Citation Data
 
-on: 
+on:
+ workflow_dispatch: 
  page_build: 
  schedule:
   - cron:  '0 8 * * *'
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+      with:
+          fetch-depth: 0
     - name: Install Reqs
       run: |
         sudo apt-get install python3-setuptools
-    - name: Run
+    # - name: Run
+    #   run: |
+    #     cd ./google_scholar_crawler
+    #     pip3 install -r requirements.txt
+    #     python3 main.py
+    #     cd ./results
+    #     git init
+    #     git config --local user.name "${GITHUB_ACTOR}"
+    #     export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+    #     git add *.json
+    #     git commit -m "Updated Citation Data"
+    #     git push origin main HEAD:google-scholar-stats --force
+    #   env: 
+    #     GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+
+    - name: Run crawler and copy JSON
       run: |
-        cd ./google_scholar_crawler
+        cd google_scholar_crawler
         pip3 install -r requirements.txt
         python3 main.py
-        cd ./results
-        git init
-        git config --local user.name "${GITHUB_ACTOR}"
-        export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-        git add *.json
-        git commit -m "Updated Citation Data"
-        git push origin main HEAD:google-scholar-stats --force
-      env: 
+        cp results/gs_data.json ../gs_data.json
+        chmod 644 ../gs_data.json
+      env:
         GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+
+    - name: Debug show copied file
+      run: |
+        ls -la
+        echo '--- gs_data.json ---'
+        head -n 40 ./gs_data.json || true
+        
+    - name: Create a pull request with the updated file
+      uses: peter-evans/create-pull-request@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: 'chore(ci): update gs_data.json'
+        branch: 'auto/gs-data-${{ github.run_number }}'
+        title: 'ci update Google Scholar data'
+        body: 'Automated update of gs_data.json by workflow'
+        base: main
+

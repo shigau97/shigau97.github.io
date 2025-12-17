@@ -395,6 +395,7 @@
       </h3>
     <div id= "publications-placeholder"> 
     </div>
+  <!-- Load and display data from gs_data.json 
     <script>
       fetch('gs_data.json')
         .then(response => response.json())
@@ -427,6 +428,7 @@
           console.error('Error fetching data:', error);
         });
     </script>
+    -->
     <div class="stream-meta article-metadata">
       <div itemprop="author">
   <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/shigau97/">Shivani Gautam</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person">SS Gaur</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person">HS Kalsi</span>
@@ -565,5 +567,71 @@
     </div>
   </div>
 </div>
+<script>
+  (async function() {
+    const placeholderId = 'publications-placeholder';
+    const container = document.getElementById(placeholderId);
+    if (!container) {
+      console.error('No container with id', placeholderId);
+      return;
+    }
+
+    // Helper to show an inline error
+    function showError(msg) {
+      container.innerHTML = '<p class="text-danger">Error loading publications: ' + msg + '</p>';
+    }
+
+    try {
+      const res = await fetch('/gs_data.json', {cache: 'no-store'});
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+
+      // Show total citations (if present)
+      const total = typeof data.citedby === 'number' ? data.citedby : (data.citedby ? Number(data.citedby) : null);
+      if (total !== null && !Number.isNaN(total)) {
+        const totalEl = document.createElement('p');
+        totalEl.className = 'lead';
+        totalEl.textContent = `Total citations: ${total}`;
+        container.appendChild(totalEl);
+      }
+
+      // publications may be an object keyed by author_pub_id
+      const publicationsObj = data.publications || {};
+      const pubs = Object.values(publicationsObj)
+        .map(p => ({
+          title: p?.bib?.title || '(no title)',
+          year: p?.bib?.pub_year || '',
+          citations: Number.isFinite(Number(p?.num_citations)) ? Number(p.num_citations) : 0,
+          link: p?.citedby_url || ''
+        }))
+        .sort((a,b) => b.citations - a.citations);
+
+      if (pubs.length === 0) {
+        container.appendChild(document.createElement('p')).textContent = 'No publications found.';
+        return;
+      }
+
+      const list = document.createElement('ul');
+      pubs.forEach(p => {
+        const li = document.createElement('li');
+        li.innerHTML = `${p.title} ${p.year ? `(${p.year})` : ''} — <strong>Citations:</strong> ${p.citations}`;
+        if (p.link) {
+          const anchor = document.createElement('a');
+          anchor.href = p.link;
+          anchor.target = '_blank';
+          anchor.rel = 'noopener';
+          anchor.textContent = ' ↗';
+          li.appendChild(anchor);
+        }
+        list.appendChild(li);
+      });
+      container.appendChild(list);
+
+    } catch (err) {
+      console.error('Error fetching gs_data.json:', err);
+      showError(err.message || 'unknown error');
+    }
+  })();
+</script>
 </body>
 </html>
