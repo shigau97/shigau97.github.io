@@ -578,7 +578,7 @@
     if (!container) return;
 
     try {
-      const res = await fetch('/results/gs_data.json', {cache: 'no-store'});
+      const res = await fetch('/gs_data.json', {cache: 'no-store'});
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
 
