@@ -24,13 +24,15 @@ shieldio_data = {
 with open(f'results/gs_data_shields# new / replace near the top
 """
 
-# choose ID: CLI -> gs_id.txt -> env
+# choose ID: CLI -> gs_id.txt next to this script -> env
 GS_ID = None
 if len(sys.argv) > 1:
     GS_ID = sys.argv[1].strip()
 else:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    id_file_path = os.path.join(script_dir, 'gs_id.txt')
     try:
-        with open('gs_id.txt', 'r', encoding='utf-8') as f:
+        with open(id_file_path, 'r', encoding='utf-8') as f:
             GS_ID = f.read().strip()
     except FileNotFoundError:
         GS_ID = os.environ.get('GOOGLE_SCHOLAR_ID')
