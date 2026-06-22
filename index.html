@@ -244,7 +244,7 @@
               Dec 2025 –
                 March 2026
                 <span class="middot-divider"></span>
-                <span> Fargo, North Dakota, USA</span>
+                <span> Plymouth, Minnesota, USA</span>
             </div>
           </div>
         </div>
@@ -546,32 +546,11 @@
     <h1>Posts</h1>
   </div>
   <div class="col-12 col-lg-8">
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/interpret/" itemprop="url">Updating posts here in two days</a>
-    </h3>
-    <div class="article-style" itemprop="articleBody">
-      Another 
+    <div id="wordpress-posts-placeholder">
+      <div class="stream-meta article-metadata">
+        <p>Loading latest posts...</p>
+      </div>
     </div>
-    <div class="stream-meta article-metadata">
-<meta content="2020-0229T10:49:18&#43;08:00" itemprop="datePublished">
-<meta content="2020-02-29 10:49:18 &#43;0800 &#43;0800" itemprop="dateModified">
-<div class="article-metadata">
-  <span class="article-date">
-          Last updated on
-    <time>Feb 29, 2020</time>
-  </span>
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
-  </span>
-</div>
-    </div>
-  </div>
-  <div class="ml-3">
-  </div>
-</div>
     <div class="see-all">
       <a href="/post/">
         See all posts
@@ -601,6 +580,69 @@
         'publication' : "Publications",
         'talk' : "Talks"
         };
+    </script>
+    <script>
+      async function loadWordPressPosts() {
+        const placeholder = document.getElementById('wordpress-posts-placeholder');
+        const wordpressUrl = 'https://public-api.wordpress.com/wp/v2/sites/shigau97.wordpress.com/posts?per_page=3';
+
+        try {
+          const response = await fetch(wordpressUrl);
+          if (!response.ok) {
+            throw new Error('HTTP ' + response.status);
+          }
+          const posts = await response.json();
+
+          if (!Array.isArray(posts) || posts.length === 0) {
+            placeholder.innerHTML = '<p>No recent posts found.</p>';
+            return;
+          }
+
+          placeholder.innerHTML = '';
+          posts.forEach(post => {
+            const postDate = new Date(post.date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric'
+            });
+            const postLink = post.link || '#';
+            const postTitle = post.title?.rendered || 'Untitled';
+            const excerpt = post.excerpt?.rendered || '';
+            const cleanExcerpt = excerpt.replace(/<[^>]+>/g, '').trim();
+
+            const article = document.createElement('div');
+            article.className = 'media stream-item';
+            article.setAttribute('itemscope', '');
+            article.setAttribute('itemtype', 'http://schema.org/BlogPosting');
+            article.innerHTML = `
+              <div class="media-body">
+                <h3 class="article-title mb-0 mt-0" itemprop="name">
+                  <a href="${postLink}" itemprop="url" target="_blank" rel="noopener">${postTitle}</a>
+                </h3>
+                <div class="article-style" itemprop="articleBody">
+                  ${cleanExcerpt}
+                </div>
+                <div class="stream-meta article-metadata">
+                  <meta content="${post.date_gmt}" itemprop="datePublished">
+                  <meta content="${post.modified_gmt}" itemprop="dateModified">
+                  <div class="article-metadata">
+                    <span class="article-date">
+                      Last updated on
+                      <time>${postDate}</time>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            `;
+            placeholder.appendChild(article);
+          });
+        } catch (error) {
+          console.error('Error loading WordPress posts:', error);
+          placeholder.innerHTML = '<p>Unable to load recent posts at this time.</p>';
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', loadWordPressPosts);
     </script>
     <script id="search-hit-fuse-template" type="text/x-template">
       <div class="search-hit" id="summary-{{key}}">
